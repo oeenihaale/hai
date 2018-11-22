@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Real Estate</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+        <meta name="description" content="Circle Hover Effects with CSS Transitions" />
+        <meta name="keywords" content="circle, border-radius, hover, css3, transition, image, thumbnail, effect, 3d" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/style7.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+		<!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+<style>
+  .contact-info-box em {
+    display: block;
+    font-style: normal;
+    margin-bottom: 14px;
+    font-size: 100%;
+    font: inherit;
+  
+}
+.contact-info-box strong {
+    display: block;
+    font: 300 30px "Raleway";
+    color: #333333;
+    text-transform: uppercase;
+    padding: 9px 0 4px 0;
+}
+.contact-info-box {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 17px;
+    font: 400 15px "Questrial";
+    color: #333333;
+    line-height: 21px;
+}
+.contact-info-box .phone-number, .contact-info-box .email-number {
+    position: relative;
+}
+.contact-info-box .phone-number:before {
+    background: url(sprite.png) -46px 0px no-repeat;
+}
+
+.contact-info-box .phone-number:before, .contact-info-box .email-number:before {
+    width: 16px;
+    height: 16px;
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.contact-info-box .phone-number, .contact-info-box .email-number {
+    position: relative;
+}
+.contact-info-box .email-number:before {
+    background: url(sprite.png) -73px 3px no-repeat;
+}
+
+.contact-info-box .phone-number:before, .contact-info-box .email-number:before {
+    width: 16px;
+    height: 16px;
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.social-media a.fb {
+    background: url(social-media.png) 0px 0px no-repeat;
+}
+
+.social-media a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 1.5px;
+    position: relative;
+}
+.social-media a.tw {
+    background: url(social-media.png) -26px 0px no-repeat;
+}
+
+.social-media a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 1.5px;
+    position: relative;
+}
+.social-media a.li {
+    background: url(social-media.png) -53px 0px no-repeat;
+}
+
+.social-media a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 1.5px;
+    position: relative;
+}
+.social-media a.gp {
+    background: url(social-media.png) -135px 0px no-repeat;
+}
+
+.social-media a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 1.5px;
+    position: relative;
+}
+.social-media a.ig {
+    background: url(social-media.png) -162px 0px no-repeat;
+}
+
+.social-media a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 1.5px;
+    position: relative;
+}
+.social-media a.em {
+    background: url(social-media.png) -190px 0px no-repeat;
+}
+
+.social-media a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 1.5px;
+    position: relative;
+}
+
+
+    .tf{
+        font:300 14px "Open sans";
+    }
+    .ts{
+      position: relative;
+      text-align: center;
+      display:block;
+      font:300 45.3px "Raleway";
+      color:#333333;
+      letter-spacing:-0.5px;
+      text-transform:uppercase;
+    }
+    .cs{
+      position: relative;
+      text-align: center;
+      display:block;
+      font:400 14px "Questrial";
+      color:#d61f35;
+      letter-spacing:6.5px;
+      text-transform:uppercase;
+    
+    }
+    .hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #337ab7 ;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 20px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+.hovereffect h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.row {
+    display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+.text{
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    font:inherit;
+    font-size:34px;
+    color:#003e75;
+    position:relative;
+    min-height: 1px;
+    padding: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: baseline;
+    }
+    .text1{
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    font:inherit;
+    font-size:34px;
+    color:#555555;
+    position:relative;
+    min-height: 1px;
+    padding: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: baseline;
+    }
+    
+    </style>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>JON</b>GRAUMAN
+     <p style="color:red">RKS REAL ESTATE</p></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+    <div class="tf">
+     <a href="gall.html" class="w3-bar-item w3-button">PROPERTIES</a>
+      <a href="#admin" class="w3-bar-item w3-button">WHO WE ARE</a>
+      <a href="admin.html" class="w3-bar-item w3-button">MY ACCOUNT</a>
+
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT US</a>
+      <img style="display: inline;" src="logo.png" alt="logo" />
+   </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+        <div class="w3-content w3-section" style="max-width:1600px">
+                <img class="mySlides w3-animate-fading" src="a.jpg" style="width:1600px; height:619px">
+                <img class="mySlides w3-animate-fading" src="b.jpg" style="width:1600px;height:619px">
+                <img class="mySlides w3-animate-fading" src="c.jpg" style="width:1600px;height:619px">
+                <img class="mySlides w3-animate-fading" src="i.jpg" style="width:1600px;height:619px">
+              </div>
+              <script>
+                    var myIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                           x[i].style.display = "none";  
+                        }
+                        myIndex++;
+                        if (myIndex > x.length) {myIndex = 1}    
+                        x[myIndex-1].style.display = "block";  
+                        setTimeout(carousel, 7000); // Change image every 2 seconds
+                    }
+                    </script>
+</header>
+
+<!-- Page content -->
+
+
+<div class="row" id="login">
+        <div class="column">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="h.jpg" alt="">
+                        <div class="overlay">
+                            <h2>FIND MY</h2>
+                            <p>
+                                <a href="search1.html">DREAM HOME</a>
+                            </p>
+                        </div>
+                </div>
+            </div>
+       <div class="column">
+            <div class="hovereffect">
+                    <img class="img-responsive" src="e.jpg" alt="">
+                        <div class="overlay">
+                            <h2>WHAT'S MY</h2>
+                            <p>
+                                <a href="admin1.php">HOME WORTH?</a>
+                            </p>
+                        </div>
+                </div>
+      </div>
+    
+      <div class="column">
+                  <div class="hovereffect">
+                          <img class="img-responsive" src="f.jpg" alt="">
+                              <div class="overlay">
+                                  <h2>HELP ME</h2>
+                                  <p>
+                                      <a href="page3.html">RELOCATE</a>
+                                  </p>
+                              </div>
+                      </div>
+            </div>
+          
+            <div class="column">
+                      <div class="hovereffect">
+                              <img class="img-responsive" src="g.jpg" alt="">
+                                  <div class="overlay">
+                                      <h2>SIGN UP FOR </h2>
+                                      <p>
+                                          <a href="http://localhost/7%20sem/spectre-sign-up-form/reg.html">EMAIL UPDATES</a>
+                                      </p>
+                                  </div>
+                          </div>
+                </div>
+              </div>
+        <div class="row">      
+    <div class="text">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Featured</div>
+    <div class="text1">properties
+</div> </div>
+<section class="main">
+			
+    <ul class="ch-grid">
+      <li>
+        <div class="ch-item">				
+          <div class="ch-info">
+            <div class="ch-info-front ch-img-1"></div>
+            <div class="ch-info-back">
+              <h3>$12,250,000</h3>
+              <p>261W Alexander Palm Road Boca Raton,FL 33432<a href="http://drbl.in/eAoj">6 BEDS | 2 BATHS</a></p>
+            </div>	
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <div class="ch-info-front ch-img-2"></div>
+            <div class="ch-info-back">
+              <h3>$97,56,000</h3>
+              <p>&emsp;212 Baker Street   &emsp;London,BB 21124<a href="http://drbl.in/eCcV">4 BEDS | 2 BATHS</a></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <div class="ch-info-front ch-img-3"></div>
+            <div class="ch-info-back">
+              <h3>$50,750,000</h3>
+              <p>8747 Twin Lake Drive Road&emsp;Sevilla, TB 88794 <a href="http://drbl.in/ewTL">7 BEDS | 4 BATHS | 1 swimming pool</a></p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    
+  </section>
+  <h2>
+      <p class="ts" id="admin">Jon Grauman</p>
+      <b class="cs">Luxury Los Angeles Real Estate</b>
+    </h2>
+  <div class="hp-widget-wrap">
+
+      <div class="hp-widget-left">
+
+        <div class="contact-info-box">
+                <div class="textwidget"><img class="agent-photo" src="http://jongrauman.com/wp-content/themes/jongrauman/images/agent-photo.png" width="350" height="266" alt="Agent Photo - Jon Grauman"/>
+<strong>Jon Grauman</strong>
+<em>Director, Estates Division</em>
+
+<div class="phone-number">
+<span> (424) 238-2484</span>
+</div>
+
+<div class="email-number">
+<a class="asis-mailto-obfuscated-email " data-value="JGrauman(at)TheAgencyRE(dotted)com" href="#">JGrauman@TheAgencyRE.com</a>
+</div>
+
+<div class="social-media">
+<a class="fb" href="http://www.facebook.com/jongraumanRE" target="_blank">
+  <img src="http://jongrauman.com/wp-content/themes/jongrauman/images/transparent.png" width="24" height="24" alt="Facebook - Jon Grauman"/>
+</a>
+<a class="tw" href="http://www.twitter.com/jongrauman" target="_blank">
+  <img src="http://jongrauman.com/wp-content/themes/jongrauman/images/transparent.png" width="24" height="24" alt="Twitter - Jon Grauman"/>
+</a>
+<a class="li" href="http://www.linkedin.com/pub/jon-grauman/22/a09/578" target="_blank">
+  <img src="http://jongrauman.com/wp-content/themes/jongrauman/images/transparent.png" width="24" height="24" alt="LinkedIn - Jon Grauman"/>
+</a>
+<a class="gp" href="http://www.plus.google.com" target="_blank">
+  <img src="http://jongrauman.com/wp-content/themes/jongrauman/images/transparent.png" width="24" height="24" alt="Google Plus - Jon Grauman"/>
+</a>
+<a class="ig" href="http://www.instagram.com/jongrauman" target="_blank">
+  <img src="http://jongrauman.com/wp-content/themes/jongrauman/images/transparent.png" width="24" height="24" alt="Instagram - Jon Grauman"/>
+</a>
+<a class="em" href="/cdn-cgi/l/email-protection#69232e1b081c040807293d010c280e0c070a103b2c470a0604" target="_blank">
+  <img src="http://jongrauman.com/wp-content/themes/jongrauman/images/transparent.png" width="24" height="24" alt="Email - Jon Grauman"/>
+</a>
+</div><!-- end of social media --></div>
+            </div><!-- end of contact info box -->
+
+      </div><!-- end of hp widget left  -->
+
+      <div class="hp-widget-right">
+          <div class="textwidget">
+<p>Jon Grauman is the Director of the Estates Division at The Agency. Jon sold over $45 mil in the 1st quarter of 2017, ranking him among the top agents in the company. As a Los Angeles native, Jon is intimately familiar with the city where he has spent his entire life. He boasts 14 years of experience as a Realtor, Developer and (formerly) Mortgage Broker, and as such, he understands every facet of the real estate business.
+Jon has extensive experience in construction and development, having developed multiple properties in Beverly Hills and the Sunset Strip. Most notably, Jon was the Developer of Modern/Architectural house designed by acclaimed Architect, Hagy Belzberg. The property, located at 1232 Sunset Plaza Dr, sold for $24 mil and still remains the highest sale ever in Sunset Plaza. </p>
+Jon extends his knowledge and expertise to his clients by personally walking them through each stage of the process of buying or selling a home. Communication is one of the keys to a successful transaction, and Jon takes a tremendous amount of pride and gratification in performing at the highest level for his clients and always making himself readily available to them. His professionalism, commitment and attentiveness will be sure to exceed expectations.
+As a 5th generation Californian, Jon’s family has a rich history in Los Angeles and played an instrumental role in helping build the Entertainment Industry, such as Grauman's Chinese Theater. Prior to Real Estate, Jon’s previous career was in the Music Business where he worked as an A&R Director, Artist Manager, Tour Manager and Promoter with such artists as Guns N' Roses, Mark Foster (Foster The People), Mixmaster Mike (Beastie Boys), Ozzy Osbourne and Marilyn Manson. Jon lives in the Hollywood Hills with my wife and partner, Lauren, their son, Easton, and their dog, Brady. </div>
+      </div><!-- end of hp widget right -->
+    
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="Amanda_York.jpg" alt="John" style="width:200px;height: 200px">
+      <h3>Amanda York</h3>
+      <p class="w3-opacity">Agent</p>
+      <p>Born and raised in Los Angeles, Amanda York has extensive knowledge of the local market.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact&emsp;+91 7022027391</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="lauren-grauman.jpg" alt="Jane" style="width:200px; height:200px" >
+      <h3>lauren Grauman</h3>
+      <p class="w3-opacity">Agent</p>
+      <p>Born, raised and educated in Southern California.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact&emsp;+91 9742207628</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="tanya-murray.jpg" alt="Mike" style="width:200px;height:200px">
+      <h3>Tanya Murray</h3>
+      <p class="w3-opacity">Agent</p>
+      <p>As a third generation real estate agent, Tanya Murray’s roots in the industry run deep.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact&emsp;+91 8797374895</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="Ross1.jpg" alt="Dan" style="width:200px; height: 200px">
+      <h3>Kevin Stewart</h3>
+      <p class="w3-opacity">Agent</p>
+      <p>He began his real estate career as an assistant to top producing broker.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact&emsp;+91 9856548962</button></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+      <div class="row">      
+          <div class="text">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Get &emsp;In</div>
+          <div class="text1">Touch
+      </div> </div>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+
+
+</body>
+</html>

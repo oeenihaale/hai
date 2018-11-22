@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+       .box{
+       width:120%;
+		background-color: grey;
+		opacity:0.5;
+		padding:10px;
+        position:relative;
+        bottom:-10px;
+        border:1px solid black;
+       }
+       .box1{
+       width:126.5%;
+		background-color:white;
+		opacity: 0.8;
+        position:relative;
+   top:10px;
+   display:inline-block;
+   border:1px solid;
+       }
+      .row{
+          display:flex;
+       }
+       .column{
+          
+           padding:10px 60px;
+       }
+       img{
+           margin:2% 10%;
+       }
+      
+       .flex1{
+           display:flex;
+           flex-direction:row;
+           margin-left:20%;
+       }
+       .footer-label {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+.footer-sublabel {
+    font-size: 14px;
+    margin-bottom: 45px;
+}
+.footer-form {
+    max-width: 813px;
+    margin: auto;
+}
+
+.textwidget  
+{
+    position: relative;
+    background-color:#333ab7;
+    color:white;
+    left:4.4%;
+    margin-right:7.8%;
+    padding:40px;
+    
+}
+#contact{
+    width:90%;
+ padding:10px;
+ background-color:#333ab7;
+ 
+}
+input{
+    background-color:#333ab7;
+    color:white;
+    box-sizing: border-box;
+}
+#button{
+    width:50px;
+    height:42px;
+}
+
+/** {
+    box-sizing: border-box;
+}*/
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <div class="row">
+    <div class="column">
+    <div class="box" style="text-align: center; color:white ;font-weight:bold">$12,70000</div>
+        <div class="box1"><p style="text-align:center">261 W ALEXANDER PALM ROAD</p>
+               <p style="text-align: center ;line-height:2px"> BOCA RATON, FL 33432</p>
+        <img src="image/32.jpg"height=170px width=300px><br/>
+        <div class="flex1">
+        <p style="border-right: 1px solid black;
+        height:35px color=grey;font-family:''">3<br/>beds &emsp13;</p>
+        <p style="border-right: 1px solid black;
+        height: 35px">&emsp;3<br/>&emsp;baths &emsp13;</p>
+        <p style="border-right: 1px solid black;
+        height: 35px">&emsp;5657<br/>&emsp;SqFt &emsp13;</p></div>
+    </div></div>
+    <div class="column">
+    <div class="box" style="text-align: center; color:white ;font-weight:bold">$12,70000</div>
+        <div class="box1"><p style="text-align:center">311 E KEY PALM ROAD</p>
+               <p style="text-align: center ;line-height:2px"> BOCA RATON, FL 33432</p>
+        <img src="image/31.jpg"height=170px width=300px><br/>
+        <div class="flex1">
+        <p style="border-right: 1px solid black;
+        height:35px color=grey;font-family:''">3<br/>beds &emsp13;</p>
+        <p style="border-right: 1px solid black;
+        height: 35px">&emsp;2<br/>&emsp;baths &emsp13;</p>
+        <p style="border-right: 1px solid black;
+        height: 35px">&emsp;1904<br/>&emsp;SqFt &emsp13;</p></div>
+    </div></div>
+    <div class="column">
+    <div class="box" style="text-align: center; color:white ;font-weight:bold">$12,70000</div>
+    <div class="box1"><p style="text-align:center">8747 TWIN LAKE DRIVE</p>
+           <p style="text-align: center ;line-height:2px"> BOCA RATON, FL 33432</p>
+    <img src="image/30.jpg"height=170px width=300px><br/>
+    <div class="flex1">
+    <p style="border-right: 1px solid black;
+    height:35px color=grey;font-family:''">2<br/>beds &emsp13;</p>
+    <p style="border-right: 1px solid black;
+    height: 35px">&emsp;1<br/>&emsp;baths &emsp13;</p>
+    <p style="border-right: 1px solid black;
+    height: 35px">&emsp;2078<br/>&emsp;SqFt &emsp13;</p></div>
+</div></div>
+</div><br/>
+<div class="row">
+<div class="column">
+<div class="box" style="text-align: center; color:white ;font-weight:bold">$12,70000</div>
+<div class="box1"><p style="text-align:center">261 BORING ROAD</p>
+       <p style="text-align: center ;line-height:2px"> GRAMP, FL 33782</p>
+<img src="image/29.jpg"height=170px width=300px><br/>
+<div class="flex1">
+<p style="border-right: 1px solid black;
+height:35px color=grey;font-family:''">3<br/>beds &emsp13;</p>
+<p style="border-right: 1px solid black;
+height: 35px">&emsp;3<br/>&emsp;baths &emsp13;</p>
+<p style="border-right: 1px solid black;
+height: 35px">&emsp;3000<br/>&emsp;SqFt &emsp13;</p></div>
+</div>
+</div>
+<div class="column">
+        <div class="box" style="text-align: center; color:white ;font-weight:bold">$1,70000</div>
+        <div class="box1"><p style="text-align:center">4456 HYDER ROAD</p>
+               <p style="text-align: center ;line-height:2px">HANUMAN NAGAR, FL 32232</p>
+        <img src="image/28.jpg"height=170px width=300px><br/>
+        <div class="flex1">
+        <p style="border-right: 1px solid black;
+        height:35px color=grey;font-family:''">1<br/>beds &emsp13;</p>
+        <p style="border-right: 1px solid black;
+        height: 35px">&emsp;1<br/>&emsp;baths &emsp13;</p>
+        <p style="border-right: 1px solid black;
+        height: 35px">&emsp;5643<br/>&emsp;SqFt &emsp13;</p></div>
+        </div>
+        </div>
+        <div class="column">
+                <div class="box" style="text-align: center; color:white ;font-weight:bold">$2,70000</div>
+                <div class="box1"><p style="text-align:center">1321 W ALEXANDER ROAD</p>
+                       <p style="text-align: center ;line-height:2px"> BOCA RATON, FL 3092</p>
+                <img src="image/27.jpg"height=170px width=300px><br/>
+                <div class="flex1">
+                <p style="border-right: 1px solid black;
+                height:35px color=grey;font-family:''">3<br/>beds &emsp13;</p>
+                <p style="border-right: 1px solid black;
+                height: 35px">&emsp;3<br/>&emsp;baths &emsp13;</p>
+                <p style="border-right: 1px solid black;
+                height: 35px">&emsp;7654<br/>&emsp;SqFt &emsp13;</p></div>
+                </div>
+                </div>
+            </div><br/>
+            <div class="row">
+                    <div class="column">
+                    <div class="box" style="text-align: center; color:white ;font-weight:bold">$32,70000</div>
+                    <div class="box1"><p style="text-align:center">269 W  PALM ROAD</p>
+                           <p style="text-align: center ;line-height:2px"> HEER RATON, FL 33932</p>
+                    <img src="image/26.jpg"height=170px width=300px><br/>
+                    <div class="flex1">
+                    <p style="border-right: 1px solid black;
+                    height:35px color=grey;font-family:''">3<br/>beds &emsp13;</p>
+                    <p style="border-right: 1px solid black;
+                    height: 35px">&emsp;3<br/>&emsp;baths &emsp13;</p>
+                    <p style="border-right: 1px solid black;
+                    height: 35px">&emsp;30000<br/>&emsp;SqFt &emsp13;</p></div>
+                    </div>
+                    </div>
+                    <div class="column">
+                            <div class="box" style="text-align: center; color:white ;font-weight:bold">$72,70000</div>
+                            <div class="box1"><p style="text-align:center">KRISHNA PURAM</p>
+                                   <p style="text-align: center ;line-height:2px"> MALA ROAD, FL 35432</p>
+                            <img src="image/25.jpg" height=170px width=300px><br/>
+                            <div class="flex1">
+                            <p style="border-right: 1px solid black;
+                            height:35px color=grey;font-family:''">3<br/>beds &emsp13;</p>
+                            <p style="border-right: 1px solid black;
+                            height: 35px">&emsp;3<br/>&emsp;baths &emsp13;</p>
+                            <p style="border-right: 1px solid black;
+                            height: 35px">&emsp;3342<br/>&emsp;SqFt &emsp13;</p></div>
+                            </div>
+                            </div>
+                            <div class="column">
+                                    <div class="box" style="text-align: center; color:white ;font-weight:bold">$2,70000</div>
+                                    <div class="box1"><p style="text-align:center">261 DEVAN  PALM ROAD</p>
+                                           <p style="text-align: center ;line-height:2px">CANAL ROAD, FL 8732</p>
+                                    <img src="image/3.jpg" height=170px width=300px><br/>
+                                    <div class="flex1">
+                                    <p style="border-right: 1px solid black;
+                                    height:35px color=grey;font-family:''">1<br/>beds &emsp13;</p>
+                                    <p style="border-right: 1px solid black;
+                                    height: 35px">&emsp;1<br/>&emsp;baths &emsp13;</p>
+                                    <p style="border-right: 1px solid black;
+                                    height: 35px">&emsp;2653<br/>&emsp;SqFt &emsp13;</p></div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="textwidget"><div class="footer-label" style="text-align: center">Subscribe To Newsletter</div>
+<div class="footer-sublabel" style="text-align: center">to subscribe enter your email address below</div>
+<!--<div class="footer-form">
+    <div class="subscribe-wrap">
+   <input type="email" name="your-email" value="Enter Email Address" id="contact" placeholder="Enter Email Address">
+<div class="imge">
+    <img src="image/5.jpg"></div>
+</div>
+    </div>--><form class="example" action="" style="margin:auto;max-width:300px" name="form1">
+  <input type="text" placeholder="enter the email-id" name="email"  id="email">
+  <div>
+    <div class="popup"><button type="submit"  i class="fa fa-search" id="button"onclick="display_alert()" value="Display alert box name="submit"></i></button>
+        <span class="popuptext" id="myPopup"></span>
+      </div>
+      <script>
+        function display_alert()
+        {
+        alert("Thank you for the message.It has been sent");
+        }
+        </script>
+  </form>
+</body>
+</html>
+

@@ -1,0 +1,229 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            *{
+                padding:0%;
+                margin:0%;
+            }
+            body{
+                background-color:lightgray;
+            }
+            .centered {
+    position: relative;
+    top:-30%;
+    left: 50%;
+    font-size:40px;
+    font-weight:bolder;
+    transform: translate(-50%, -50%);
+    background-color:lightgray;
+       
+            }
+            
+         #contact{
+                background-color: black;
+                height:20rem;  
+                width:40rem;    
+                 text-align: center;
+                 line-height: 75px;
+                 font-size: 30px;
+                 float:right;
+    border-style:double;
+        border: 5px 3px 3px 5px;
+        border-color: red;
+            }
+            input{
+                width:400px;
+                line-height: 30px;
+                background-color:lightgray;
+                border-radius:5px;
+                margin-top:35px;
+            }
+           textarea{
+                width: 70%;
+    height:6rem;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color:lightgrey;
+    font-size: 16px;
+    resize: none;
+    margin-top:15px;
+}
+#submit{
+    width:10rem; 
+    margin-top: 15px;
+    padding:2px;
+    border-radius: 4px;
+    background-color: white;
+    font-weight: bolder;
+}
+#info{
+position:relative;
+padding:10px;
+line-height: 40px;
+background-color:lightgrey;
+}
+h3{
+margin-left:6rem;
+}
+h2{
+    text-align: center;
+    color:blue;
+}
+#flex{
+    display:flex;
+    flex-direction: row;
+}
+textarea{
+    position: relative;
+    padding:-10px;
+}
+.container{
+    background-image: url("image/12.jpg");
+    background-repeat:no-repeat;
+	background-size:cover;
+    width:100%;
+    position: relative;
+    margin-top:-120px;
+    line-height:-20px;
+}
+/*.box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50vh;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  background: rgba(0,0,0, 0.5);
+}*/
+
+.box {
+  
+  width: 100%;
+  height: 50vh;
+  filter: blur(0.8rem);
+  
+  
+}
+
+.box:hover{ 
+  filter: blur(0);
+}
+
+h1, p {
+  font-weight: 800;
+  text-align: center;
+  color: white;
+}
+
+/*.layover {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(.3rem);
+  background-color: none;
+  background-image: url(https://wallpaperbrowse.com/media/images/3848765-wallpaper-images-download.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layover:hover {
+  filter:blur(0);
+}*/
+</style>
+        <body>
+        <img src="image/22.jpg" width="100%" height="49%"/>
+            <!--<div class="centered"><marquee>CONTACT US</marquee></div> -->
+            <div class="centered"><h2>What our customers say</h2>
+                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+                    </div>
+                    <div class="item">
+                      <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    </div>
+                    <div class="item">
+                      <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+                    </div>
+                  </div></div> 
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                </div>
+            <!--<div id="flex">
+        <div id="contact">
+            <form>
+        <input type="text" placeholder="Enter your name" name="name"><br/> 
+        <input type="email" placeholder="enter email-id" name="email"> <br/>
+        <textarea placeholder="enter message"></textarea><br/>
+        <input type="submit" value="Send Message" id="submit">
+            </form>
+            </div>
+            <div id="info">
+                <h2>ADDRESS</h2>
+            <h3>1124 Winding Way ,70 Pine St. Newyork,NY 10270.</h3>
+            <h3>4446 Berkley Street,Philadelphia,Pennsylvania.</h3>
+            <h2>GET IN TOUCH</h2>
+            <h3>Mobile:9987656738<br/>
+            Email-id:acd1234@gmail.com</h3>
+                            
+            </div>
+           </div>-->
+           <div class="box">
+           <div class="container">
+                <h2 class="text-center">CONTACT</h2>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p>Contact us and we'll get back to you within 24 hours.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> 
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="row">
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                      </div>
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                      </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <!--<div class="row">
+                      <div class="col-sm-19 form-group">-->
+                        <button class="right" type="submit">Send message</button>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!--<div class="layover">
+  
+                </div>
+                <div class="box-container">
+                  <div class="box">
+                    <h1>I hope This is what you were looking for</h1>
+                    <p>Agar koi problem ho to call kar lena</p>
+                </div>
+                </div>-->
+        
+        </body>
+    </head>
+</html>

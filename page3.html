@@ -1,0 +1,151 @@
+<html>
+    <head>
+    <style>
+body{
+    background-image:url('image/24.jpg');
+    background-repeat:no-repeat;
+    background-size:100% 700px;
+}
+#login{
+        width: 30%;
+		background-color: grey;
+		opacity: 0.8;
+		padding: 50px 2px;
+        position:relative;
+        left:30%;
+        height:530px;
+        }
+    .property{
+        position: relative;
+        left:18%;
+        padding:5;
+        line-height:-2px;
+    }
+.property select{
+    height:40px;
+    width:250px;
+   
+}
+#input{
+    position: relative;
+        width:250px;
+        padding:10px;
+       
+}
+</style>
+</head>
+<body>
+    <div id="login">
+          <h1 style="color:white ;text-align:center; top:-3px;position:relative">QUICK SEARCH</h1> 
+          <form action="page3.php" method="post" name="f1">
+                <div class="property">
+                        <input type="text" placeholder="enter id" name="id" id="input"/>
+                </div>
+
+          <div class="property">
+                <select title="Property type" name="propertytype" required>
+                    <option value="">Property Type</option>
+                    <option value="SFR,CND">House / Condo</option>
+                    <option value="SFR">House Only</option>
+                    <option value="CND">Condo Only</option>
+                    <option value="LL">Lots / Land</option>
+                    <option value="RI">Multi-Unit Residential</option>
+                    <option value="MH">Mobile Home</option>
+                    <option value="RNT">Rental</option>
+                    <option value="COM">Commercial</option>
+                </select>
+            </div>
+            <div class="property">
+                    <select title="City" name="cityid" required>
+                        <option value="">Select City</option>
+                    <option value="atlantis">Atlantis</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Avon Park">Avon Park</option>
+                    <option value="Bal Harbour">Bal Harbour</option>
+                    <option value="Greenacres">Greenacres</option>
+                    <option value="Gulf Stream">Gulf Stream</option>
+                    <option value="Hallandale">Hallandale</option>
+                    <option value="Haverhill">Haverhill</option>
+                    <option value="Highland Beach">Highland Beach</option>
+                    <option value="Hillsboro Beach">Hillsboro Beach</option>
+                    <option value="Hobe Sound">Hobe Sound</option>
+                    <option value="Hollywood">Hollywood</option>
+                    <option value="Homestead">Homestead</option>
+                    <option value="Hutchinson Island">Hutchinson Island</option>
+                    <option value="Pompano Beach">Pompano Beach</option>
+                    <option value="Port Charlotte">Port Charlotte</option>
+                    <option value="Port Saint Lucie">Port Saint Lucie</option>
+                    <option value="Port Salerno">Port Salerno</option>
+                    <option value="Punta Gorda">Punta Gorda</option>
+                </select>
+                </div>
+                <div class="property">
+                        <select title="Beds" name="bedrooms" required>
+                            <option value="">Beds</option>
+                            <option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                            <option value="5">5+</option>
+                            <option value="6">6+</option>
+                            
+                        </select>
+                    </div>
+                    <div class="property">
+                            <select title="Baths" name="bathcount" required>
+                                <option value="">Baths</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                        <div class="property">
+                                <select title="Min. Price" name="minlistprice" required>
+                                    <option value="">Min. Price</option>
+                                    <option value="100000">100,000</option>
+                                    <option value="200000">200,000</option>
+                                    <option value="300000">300,000</option>
+                                    <option value="400000">400,000</option>
+                                    <option value="500000">500,000</option>
+                                    <option value="600000">600,000</option>
+                                    <option value="700000">700,000</option>
+                                    <option value="800000">800,000</option>
+                                    <option value="900000">900,000</option>
+                                    <option value="1000000">1,000,000</option>
+                                    <option value="2000000">2,000,000</option>
+                                    <option value="3000000">3,000,000</option>
+                                </select>
+                            </div>
+                            <div class="property">
+                                    <select title="Max. Price" name="maxlistprice" required>
+                                        <option value="">Max. Price</option>
+                                    <option value="100000">100,000</option>
+                                    <option value="200000">200,000</option>
+                                    <option value="300000">300,000</option>
+                                    <option value="400000">400,000</option>
+                                    <option value="500000">500,000</option>
+                                    <option value="600000">600,000</option>
+                                    <option value="700000">700,000</option>
+                                    <option value="800000">800,000</option>
+                                    <option value="900000">900,000</option>
+                                    <option value="1000000">1,000,000</option>
+                                    <option value="2000000">2,000,000</option>
+                                    <option value="3000000">3,000,000</option>
+                                    </select>
+                                </div>
+                                <div class="property">
+                                    <select title="purpose" name="purpose" >
+                                    <option value="">sell</option>
+                                    </select>
+
+                                </div>
+                                <div class="property">
+                                Select files: <input type="file" name="image" multiple><br><br></div>
+                                <div class="property">
+
+                                         <button class="button" name="submit">INSERT</button>
+                                         <button class="button" name="search" onclick="f1.action='search.php';return true";>SEARCH</button></div>
+                                    </form>
+    </div>
